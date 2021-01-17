@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">trash tracker</string>
+    <string name="welcomeText">welcome to trash tracker</string>
+    <string name="welcomeSubtext">the first step to environmental accountability</string>
+    <string name="progressText">your daily carbon footprint is 0% of the average</string>
+    <string name="buttonText">log</string>
+    <string name="tableLabelItem"><b>item</b></string>
+    <string name="tableLabelCount"><b>count</b></string>
+    <string name="tableLabelCarbon"><b>carbon</b></string>
+    <string name="tableLabelTotal"><b>total</b></string>
+    <string name="average"><b>average</b></string>
+    <string-array name="items_array">
+        <item><b>choose an item</b></item>
+        <item>bottle</item>
+        <item>bag</item>
+        <item>mask</item>
+        <item>coffee</item>
+        <item>box</item>
+        <item>candy</item>
+    </string-array>
+</resources>
