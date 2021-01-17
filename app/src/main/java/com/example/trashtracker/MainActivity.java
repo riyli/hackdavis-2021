@@ -2,8 +2,8 @@ package com.example.trashtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -94,6 +94,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
             add(item);
 
+            TableRow rowHeader = (TableRow) table.findViewWithTag("tableRow");
+            TextView countHeader = rowHeader.findViewWithTag("totalColumn");
+            DecimalFormat df = new DecimalFormat("###.00");
+            String totalConsumption = "total: " + df.format(this.consumption).toString();
+            countHeader.setText(totalConsumption);
+            countHeader.setTypeface(countHeader.getTypeface(), Typeface.BOLD);
+
             ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar4);
             progressBar.setProgress((int) (progress() * 100));
 
@@ -126,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 row.addView(countTable);
                 TextView carbonItemTable = new TextView(this);
                 carbonItemTable.setTag("carbonItemTable");
-                DecimalFormat df = new DecimalFormat("###.00");
+//                DecimalFormat df = new DecimalFormat("###.00");
                 carbonItemTable.setText(df.format(carbonMap.get(item)));
                 row.addView(carbonItemTable);
                 TextView totalTable = new TextView(this);
@@ -143,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 TextView countTable = row.findViewWithTag("countTable");
                 countTable.setText(itemMap.get(item).toString());
                 TextView totalTable = row.findViewWithTag("totalTable");
-                DecimalFormat df = new DecimalFormat("###.00");
+//                DecimalFormat df = new DecimalFormat("###.00");
                 totalTable.setText(df.format(itemMap.get(item) * carbonMap.get(item)).toString());
             }
         }

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f7f7f7"
     tools:context=".MainActivity">
 
     <TextView
@@ -65,29 +66,30 @@
         android:layout_height="39dp"
         android:layout_marginTop="152dp"
         android:layout_marginEnd="40dp"
-        android:text="@string/buttonText"
         android:onClick="enterNode"
+        android:text="@string/buttonText"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
-        android:divider="?android:attr/dividerHorizontal"
-        android:showDividers="middle"
-        android:stretchColumns="*"
-        android:layout_span="2"
         android:id="@+id/table"
         android:layout_width="307dp"
         android:layout_height="165dp"
         android:layout_marginStart="48dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="48dp"
+        android:layout_span="2"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle"
+        android:stretchColumns="*"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3">
 
         <TableRow
             android:id="@+id/tableRow"
+            android:tag="tableRow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout_editor_absoluteX="16dp"
@@ -122,6 +124,7 @@
 
             <TextView
                 android:id="@+id/itemTotalCarbon"
+                android:tag="totalColumn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -156,5 +159,16 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/progressBar4" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="304dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/treenity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
