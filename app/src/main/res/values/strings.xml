@@ -6,8 +6,8 @@
     <string name="buttonText">log</string>
     <string name="tableLabelItem">item</string>
     <string name="tableLabelCount">count</string>
-    <string name="tableLabelCarbon">item carbon</string>
-    <string name="tableLabelTotal">item total carbon</string>
+    <string name="tableLabelCarbon">carbon</string>
+    <string name="tableLabelTotal">total</string>
     <string name="average">average</string>
     <string-array name="items_array">
         <item>choose an item</item>
@@ -16,6 +16,6 @@
         <item>mask</item>
         <item>coffee</item>
         <item>box</item>
-        <item>candy wrapper</item>
+        <item>candy</item>
     </string-array>
 </resources>

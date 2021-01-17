@@ -66,11 +66,16 @@
         android:layout_marginTop="152dp"
         android:layout_marginEnd="40dp"
         android:text="@string/buttonText"
+        android:onClick="enterNode"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TableLayout
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle"
+        android:stretchColumns="*"
+        android:layout_span="2"
         android:id="@+id/table"
         android:layout_width="307dp"
         android:layout_height="165dp"
@@ -85,7 +90,6 @@
             android:id="@+id/tableRow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="261dp">
 
